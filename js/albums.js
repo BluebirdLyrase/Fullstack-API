@@ -10,7 +10,7 @@ $.get(url, function (data, status) {
                                     <td>${item['userId']}</td>
                                     <td>${item['id']}</td>
                                     <td>${item['title']}</td>
-                                    <td><a href="userdetail.html" class="btn btn-primary" style="color:white" onclick="albumBtn(${item['id']})" role="button">Detail</a></td>
+                                    <td><a href="userdetail.html?id=${item['id']}" class="btn btn-primary" style="color:white" role="button">Detail</a></td>
                                     </tr>`);
 
         });

@@ -21,8 +21,6 @@ $.get(url, function (data, status) {
         $('#name').attr('value',data['name']);
         $('#username').attr('value',data['username']);
      
-        
-        
         $('#street').attr('value',data['address']['street']);
         $('#suite').attr('value',data['address']['suite']);
         $('#city').attr('value',data['address']['city']);
@@ -30,19 +28,14 @@ $.get(url, function (data, status) {
         $('#latitude').attr('value',data['address']['geo']['lat']);
         $('#longitude').attr('value',data['address']['geo']['lng']);
         
-        
         $('#email').attr('value',data['email']);
         $('#phone').attr('value',data['phone']);
         $('#website').attr('value',data['website']);
         $('#comname').attr('value',data['company']['name']);
         $('#comcat').attr('value',data['company']['catchPhrase']);
         $('#combs').attr('value',data['company']['bs']);
-
         
-        
-        
-        
-        
+        $('#map').attr('src',`https://maps.google.com/maps?q=${data['address']['geo']['lat']},${data['address']['geo']['lng']}2&hl=es;z=14&amp;&output=embed`);
         
     }
 });
